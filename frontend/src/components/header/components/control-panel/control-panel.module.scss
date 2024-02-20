@@ -1,0 +1,44 @@
+.info {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 1rem;
+	align-items: center;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.loginIcon,
+.logoutIcon {
+	font-size: 22px;
+	/* font-weight: 600; */
+}
+
+.panel {
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 1rem;
+}
+
+.userName {
+	font-size: 24px;
+	color: rgb(238, 179, 51);
+}
+
+.highlight {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: inherit;
+	cursor: pointer;
+}
+
+.highlight:hover {
+	background-color: var(--background-blue);
+}
+
+.link {
+	position: absolute;
+	top: 20%;
+	left: 20%;
+}

@@ -1,0 +1,19 @@
+.inputWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	margin-bottom: 1rem;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.input {
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 1rem;
+	width: 200px;
+}

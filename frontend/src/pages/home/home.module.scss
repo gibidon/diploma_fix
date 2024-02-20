@@ -1,0 +1,29 @@
+@use '#styles/mixins' as mixins;
+
+.home {
+	padding: 1rem 0;
+	margin: 0 auto;
+	max-width: 1168px;
+	display: flex;
+	gap: 1rem;
+
+	@include mixins.center-content-mixin;
+}
+
+.content {
+	flex-grow: 2;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 1rem;
+	position: relative;
+}
+
+img {
+	border-radius: 6px;
+}
+
+@media screen and (max-width: 1068px) {
+	.content {
+		gap: 0.3rem;
+	}
+}

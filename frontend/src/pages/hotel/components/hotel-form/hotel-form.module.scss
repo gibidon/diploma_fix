@@ -1,0 +1,55 @@
+.form {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+.saveBtn,
+.deleteBtn,
+.addImageBtn {
+	max-width: 100px;
+	font-family: inherit;
+	appearance: none;
+	border: 0;
+	border-radius: 5px;
+	background: #4676d7;
+	color: #fff;
+	padding: 8px 16px;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.deleteBtn {
+	background: rgb(216, 64, 64);
+}
+.saveBtn:hover {
+	background: #1d49aa;
+}
+
+.deleteBtn:hover {
+	background: rgb(136, 57, 57);
+}
+.saveBtn:focus {
+	outline: none;
+	box-shadow: 0 0 0 4px #cbd6ee;
+}
+
+.textarea {
+	resize: horizontal;
+	width: 400px;
+	height: 150px;
+}
+
+.images {
+	max-width: 300px;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.imageUrlRow {
+	display: flex;
+	gap: 1rem;
+}
+.addImageBtn {
+	background-color: var(--background-green);
+}

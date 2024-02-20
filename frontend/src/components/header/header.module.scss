@@ -1,0 +1,39 @@
+.main {
+	z-index: 10;
+	height: 10dvh;
+	position: sticky;
+	top: 0;
+	color: var(--text-bright-white);
+	background-color: var(--background-blue);
+}
+
+.mainDark {
+	z-index: 10;
+	height: 10dvh;
+	position: sticky;
+	top: 0;
+	background-color: #242020;
+	color: var(--text-white);
+}
+
+.headerContent {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1168px;
+	margin: 0 auto;
+	z-index: 20;
+}
+
+.logo {
+	font-size: 30px;
+}
+
+.leftAligned {
+}
+
+.rightAligned {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	gap: 1.5rem;
+}

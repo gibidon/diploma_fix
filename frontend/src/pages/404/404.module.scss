@@ -1,0 +1,17 @@
+.text {
+	font-size: 40px;
+	font-weight: 600;
+}
+
+.button {
+	min-width: 100px;
+	padding: 0.5rem 1rem;
+	background-color: #fcda91;
+	border: 1px solid transparent;
+	border-radius: 8px;
+	font-size: 20px;
+}
+
+.button:hover {
+	border-color: rgb(247, 152, 28);
+}

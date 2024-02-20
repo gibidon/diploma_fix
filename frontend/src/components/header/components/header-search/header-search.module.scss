@@ -1,0 +1,83 @@
+.headerSearch {
+	height: 30px;
+	background-color: hsl(0, 0%, 100%);
+	border: 3px solid hsl(39, 100%, 65%);
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 10px 0;
+	border-radius: 5px;
+	position: absolute;
+	bottom: -25px;
+	width: 100%;
+	max-width: 1164px;
+}
+
+.headerIcon {
+	color: hsl(206, 4%, 68%);
+}
+
+.headerSearchItem {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.headerSearchInput {
+	border: none;
+	outline: none;
+	/* background-color: white; */
+}
+
+.headerBtn {
+	background: hsl(224, 73%, 49%);
+	color: white;
+	font-weight: 600;
+	font-size: 18px;
+	min-width: 70px;
+	padding: 10px 20px;
+	border-radius: 5px;
+}
+
+.headerSearchText {
+	color: hsl(36, 7%, 70%);
+	cursor: pointer;
+}
+
+.date {
+	position: absolute;
+	top: 50px;
+}
+
+.options {
+	position: absolute;
+	top: 50px;
+	background-color: hsl(0, 0%, 100%);
+	color: hsl(0, 0%, 75%);
+	border-radius: 5px;
+	z-index: 40;
+}
+
+.optionItem {
+	width: 200px;
+	display: flex;
+	justify-content: space-between;
+	margin: 10px;
+}
+
+.optionCounter {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 12px;
+	color: hsl(0, 0%, 0%);
+}
+
+.optionCounterButton {
+	width: 30px;
+	height: 30px;
+	border: 1px solid hsl(240, 76%, 45%);
+	color: hsl(224, 73%, 49%);
+	cursor: pointer;
+	background-color: #e7e7e7;
+}

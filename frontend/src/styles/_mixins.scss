@@ -1,0 +1,15 @@
+@mixin dark-background-bright-font {
+	background-color: var(--background-dark);
+	color: var(--text-white);
+
+	input,
+	select,
+	textarea {
+		color: inherit;
+	}
+}
+
+@mixin center-content-mixin {
+	margin: 0 auto;
+	max-width: 1168px;
+}

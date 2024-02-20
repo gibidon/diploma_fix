@@ -1,0 +1,13 @@
+.container {
+	position: relative;
+	display: flex;
+	color: darkcyan;
+	background-color: darkkhaki;
+}
+
+.tooltip {
+	position: absolute;
+	top: 20px;
+	color: red;
+	background-color: salmon;
+}

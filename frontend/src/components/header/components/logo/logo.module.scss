@@ -1,0 +1,15 @@
+.logo {
+	font-size: 40px;
+	font-weight: 600;
+
+	a {
+		text-decoration: none;
+		font-size: inherit;
+		color: var(--text-bright-white);
+		letter-spacing: 0;
+	}
+
+	a:hover {
+		color: hsl(36, 19%, 89%);
+	}
+}

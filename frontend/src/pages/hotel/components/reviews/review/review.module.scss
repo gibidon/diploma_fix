@@ -1,0 +1,22 @@
+%review-base {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem;
+
+	border-radius: 6px;
+	min-height: 2.5rem;
+}
+
+.review {
+	@extend %review-base;
+	background-color: var(--background-dim-white);
+}
+
+.reviewDark {
+	@extend %review-base;
+	background-color: var(--background-dark-gray);
+}
+
+.author {
+	font-weight: 600;
+}
