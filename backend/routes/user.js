@@ -36,7 +36,7 @@ router.get("/:id/reservations", authenticated, async (req, res) => {
 
 		res.send(userReservations.map(mapReservation))
 	} catch (err) {
-		return { error: err.message }
+		res.send({ error: err.message || "Error getting reservations" })
 	}
 })
 
@@ -48,7 +48,7 @@ router.delete(
 
 			res.send({ error: null })
 		} catch (err) {
-			return { error: err.message }
+			res.send({ error: err.message })
 		}
 	}
 )
@@ -66,7 +66,7 @@ router.patch("/reservations/:reservationId", async (req, res) => {
 
 		res.send({ data: updatedReservation, error: null })
 	} catch (err) {
-		return { error: err.message }
+		res.send({ error: err.message })
 	}
 })
 
@@ -79,7 +79,7 @@ router.get("/", authenticated, hasRole([ROLES.ADMIN]), async (req, res) => {
 			error: null,
 		})
 	} catch (err) {
-		return { error: err.message }
+		res.send({ error: err.message })
 	}
 })
 
@@ -91,9 +91,9 @@ router.delete(
 		try {
 			const deletedUser = await deleteUser(req.params.id)
 
-			return { error: null }
+			res.send({ error: null })
 		} catch (err) {
-			return { error: err.message }
+			res.send({ error: err.message })
 		}
 	}
 )
@@ -108,7 +108,7 @@ router.get(
 
 			res.send({ reservations: reservations.map(mapReservation), error: null })
 		} catch (err) {
-			return { error: err.message }
+			res.send({ error: err.message })
 		}
 	}
 )

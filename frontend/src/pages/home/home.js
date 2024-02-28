@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useDebouncedFunction, useApi, useLoading } from '#hooks';
+import { useDebouncedFunction, useApi, useLoading, useDownloadHotels } from '#hooks';
 import { HotelCard, SearchColumn } from './components';
 import { DEBOUNCE_DELAY, PAGINATION_LIMIT } from '#constants';
 import { BoldText, Loader } from '#components';
@@ -17,6 +17,7 @@ const initialSearchParams = {
 
 export const Home = () => {
 	//option1,uncontrolled inputs in SearchColumn
+
 	const [searchParams, setSearchParams] = useState(initialSearchParams);
 	const { loading } = useLoading();
 	const { searchPhrase, page, country, min, max } = searchParams;
@@ -34,6 +35,27 @@ export const Home = () => {
 		});
 	};
 
+	// const [searchParams, setSearchParams] = useState(initialSearchParams);
+	// const { loading } = useLoading();
+	// const { searchPhrase, page, country, min, max } = searchParams;
+
+	// const { hotels } = useDownloadHotels(
+	// 	searchPhrase,
+	// 	page,
+	// 	PAGINATION_LIMIT,
+	// 	country,
+	// 	min,
+	// 	max,
+	// );
+
+	// const onChange = (e) => {
+	// 	debouncedSearch({
+	// 		// setSearchParams({
+	// 		...searchParams,
+	// 		[e.target.name]: e.target.value,
+	// 	});
+	// };
+
 	return (
 		<div className={styles.home}>
 			<SearchColumn
@@ -43,7 +65,7 @@ export const Home = () => {
 				max={max}
 				onChange={onChange}
 			/>
-			<div className={styles.content}>
+			<div className={styles.hotels}>
 				{loading && <Loader />}
 
 				{hotels?.length >= 1 ? (

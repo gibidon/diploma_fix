@@ -31,14 +31,7 @@ export const AdminPage = () => {
 	}, [shouldUpdatePage, setLoading, userRole]);
 
 	const deleteUser = (id) => {
-		request(`/users/${id}`, 'DELETE').then(
-			setShouldUpdatePage(!shouldUpdatePage),
-			// TODO delete user's bookings and reviews
-		);
-	};
-
-	const deleteHotel = async (id) => {
-		request(`/hotels/${id}`, 'DELETE').then(() => setShouldUpdatePage(!shouldUpdatePage));
+		request(`/users/${id}`, 'DELETE').then(setShouldUpdatePage(!shouldUpdatePage));
 	};
 
 	if (loading) return <Loader />;

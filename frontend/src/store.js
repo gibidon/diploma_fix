@@ -23,7 +23,4 @@ const reducer = combineReducers({
 	users: usersReducer,
 });
 
-export const store = createStore(
-	reducer,
-	composeWithDevTools(applyMiddleware(thunk)),
-);
+export const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));

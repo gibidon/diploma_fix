@@ -32,7 +32,7 @@ router.get("/", async (req, res) => {
 
 		res.send({ hotels: hotels.map(mapHotel), lastPage })
 	} catch (err) {
-		return { error: err.message }
+		res.send({ error: err.message })
 	}
 })
 
@@ -42,7 +42,7 @@ router.get("/:id", async (req, res) => {
 
 		res.send({ data: mapHotel(hotel), error: null })
 	} catch (err) {
-		return { error: err.message }
+		res.send({ error: err.message })
 	}
 })
 
@@ -62,7 +62,7 @@ router.post(
 
 			res.send({ data: mapHotel(newHotel) })
 		} catch (err) {
-			return { error: err.message }
+			res.send({ error: err.message })
 		}
 	}
 )
@@ -84,7 +84,7 @@ router.patch(
 
 			res.send({ data: mapHotel(updatedHotel) })
 		} catch (err) {
-			return { error: err.message }
+			res.send({ error: err.message })
 		}
 	}
 )
@@ -99,7 +99,7 @@ router.delete(
 
 			res.send({ error: null })
 		} catch (err) {
-			return { error: err.message }
+			res.send({ error: err.message })
 		}
 	}
 )
@@ -113,7 +113,7 @@ router.post("/:id/reviews", authenticated, async (req, res) => {
 
 		res.send({ data: mapReview(newReview) })
 	} catch (err) {
-		return { error: err.message }
+		res.send({ error: err.message })
 	}
 })
 
@@ -126,7 +126,7 @@ router.delete(
 
 			res.send({ error: null })
 		} catch (err) {
-			return { error: err.message }
+			res.send({ error: err.message })
 		}
 	}
 )

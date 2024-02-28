@@ -11,9 +11,8 @@ export async function all(
 		const response = await fetch(
 			`/hotels?search=${searchPhrase}&page=${page}&limit=${PAGINATION_LIMIT}&country=${country}&min=${min}&max=${max}&rating=${rating}`,
 		);
-
-		const data = await response.json();
-		return data;
+		const { hotels, lastPage } = await response.json();
+		return { hotels, lastPage };
 	} catch (err) {
 		return { error: err.message || 'Error downloading hotels' };
 	}

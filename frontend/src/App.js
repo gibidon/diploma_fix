@@ -3,9 +3,9 @@ import { Routes, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setUser } from '#actions';
 import { Authorization, Home, Hotel, Registration, UserPage, Page404 } from '#pages';
-import { Header, Footer, LayoutPage, MailList, Main, Modal } from '#components';
+import { Header, Footer, LayoutPage, MailList, Modal } from '#components';
 import { AdminPage } from '#pages/admin-page/admin-page';
-import './App.css';
+import './styles/App.css';
 import './styles/_mixins.scss';
 
 export const App = () => {

@@ -52,7 +52,7 @@ async function getHotel(id) {
 async function deleteHotel(id) {
 	const deletedHotel = await Hotel.deleteOne({ _id: id })
 
-	return deleteHotel
+	return deletedHotel
 }
 
 module.exports = {

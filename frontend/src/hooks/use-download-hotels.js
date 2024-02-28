@@ -10,8 +10,7 @@ export const useDownloadHotels = (
 	max = 999,
 ) => {
 	const [hotels, setHotels] = useState([]);
-	const [lastPage, setLastPage] = useState(1);
-	const { loading, setLoading } = useLoading();
+	const { setLoading } = useLoading();
 
 	useEffect(() => {
 		setLoading(true);
@@ -19,13 +18,14 @@ export const useDownloadHotels = (
 			`/hotels?search=${searchPhrase}&page=${page}&limit=${PAGINATION_LIMIT}&country=${country}&min=${min}&max=${max}`,
 		)
 			.then((res) => res.json())
-			.then(({ data: { hotels, lastPage } }) => {
+			.then(({ hotels }) => {
 				setHotels(hotels);
-				setLastPage(lastPage);
 			})
-			.catch((e) => console.log(e))
+			.catch((err) => {
+				throw new Error(err.message);
+			})
 			.finally(() => setLoading(false));
 	}, [searchPhrase, page, PAGINATION_LIMIT, country, min, max, setLoading]);
 
-	return { hotels, lastPage };
+	return { hotels };
 };
