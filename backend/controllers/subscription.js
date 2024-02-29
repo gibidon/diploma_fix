@@ -1,9 +1,12 @@
 const Subscription = require("../models/Subscription")
 
 async function addSubscription(email) {
-	const newSubscription = await Subscription.create(email)
-
-	return newSubscription
+	try {
+		const newSubscription = await Subscription.create(email)
+		return newSubscription
+	} catch (error) {
+		return { error: error.message || "Error adding subscription" }
+	}
 }
 
 module.exports = addSubscription

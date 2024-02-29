@@ -16,7 +16,7 @@
 
 .box {
 	margin: auto;
-	padding: 0 10px 20px;
+	padding: 10px 20px;
 	width: 300px;
 	position: relative;
 	z-index: 30;
@@ -24,6 +24,7 @@
 	transform: translate(0, -50%);
 	background-color: var(--background-white);
 	border: var(--border-orange);
+	border-radius: 8px;
 	color: var(--text-dark);
 	text-align: center;
 }
