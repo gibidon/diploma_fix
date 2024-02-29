@@ -19,6 +19,7 @@
 .mailDark {
 	@extend %mail-base;
 	background-color: var(--background-light-gray);
+	color: var(--text-dark);
 }
 
 .mailInputContainer > input {
