@@ -10,9 +10,9 @@
 
 .mail {
 	@extend %mail-base;
-	// background-color: #003580;
+
 	background-color: var(--background-blue);
-	// color: white;
+
 	color: var(--text-white);
 }
 

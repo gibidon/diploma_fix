@@ -5,7 +5,7 @@ async function updateReservation(id, reservation) {
 	const newReservation = await Reservation.findByIdAndUpdate(id, reservation, {
 		returnDocument: "after",
 	})
-	// populate
+
 	return newReservation
 }
 

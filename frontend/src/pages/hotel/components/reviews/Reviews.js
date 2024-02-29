@@ -7,7 +7,7 @@ import { Review } from './review';
 import styles from './reviews.module.css';
 
 //React.memo helps reduce rerenders a bit,though not necessary
-// export const Reviews = memo(({ reviews, hotelId }) => {
+
 export const Reviews = ({ reviews, hotelId }) => {
 	const [newReview, setNewReview] = useState('');
 
@@ -29,7 +29,7 @@ export const Reviews = ({ reviews, hotelId }) => {
 				<Review
 					key={_id}
 					content={content}
-					author={author.login ?? author} //TODO refactor this
+					author={author.login ?? author}
 					reviewId={_id}
 					hotelId={hotelId}
 				/>

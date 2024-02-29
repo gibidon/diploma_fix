@@ -13,13 +13,6 @@ export const EditableInput = ({ id, label, value, ...props }) => {
 		setEditMode(true);
 	};
 
-	// const onEditHandler = () => {
-	// 	stopEditMode();
-	// };
-	const onEditHandler = () => {
-		stopEditMode();
-	};
-
 	useEffect(() => {
 		if (!editMode) return;
 

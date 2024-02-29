@@ -10,7 +10,6 @@ export const MultiRangeSlider = ({ min, max, onChange }) => {
 				max="400"
 				value={min}
 				onChange={onChange}
-				// className={styles.thumb .thumb--zindex-3}
 			/>
 			<input
 				type="range"
@@ -19,7 +18,6 @@ export const MultiRangeSlider = ({ min, max, onChange }) => {
 				max="400"
 				value={max}
 				onChange={onChange}
-				// className="thumb thumb--zindex-4"
 			/>
 			<div className="slider">
 				<div className="slider__track" />

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useDebouncedFunction, useApi, useLoading, useDownloadHotels } from '#hooks';
+import { useDebouncedFunction, useApi, useLoading } from '#hooks';
 import { HotelCard, SearchColumn } from './components';
 import { DEBOUNCE_DELAY, PAGINATION_LIMIT } from '#constants';
 import { BoldText, Loader } from '#components';
@@ -35,27 +35,6 @@ export const Home = () => {
 		});
 	};
 
-	// const [searchParams, setSearchParams] = useState(initialSearchParams);
-	// const { loading } = useLoading();
-	// const { searchPhrase, page, country, min, max } = searchParams;
-
-	// const { hotels } = useDownloadHotels(
-	// 	searchPhrase,
-	// 	page,
-	// 	PAGINATION_LIMIT,
-	// 	country,
-	// 	min,
-	// 	max,
-	// );
-
-	// const onChange = (e) => {
-	// 	debouncedSearch({
-	// 		// setSearchParams({
-	// 		...searchParams,
-	// 		[e.target.name]: e.target.value,
-	// 	});
-	// };
-
 	return (
 		<div className={styles.home}>
 			<SearchColumn
@@ -83,7 +62,30 @@ export const Home = () => {
 	);
 };
 
-//option2
+// option2,with custom hook useDownloadHotels
+
+// const [searchParams, setSearchParams] = useState(initialSearchParams);
+// const { loading } = useLoading();
+// const { searchPhrase, page, country, min, max } = searchParams;
+
+// const { hotels } = useDownloadHotels(
+// 	searchPhrase,
+// 	page,
+// 	PAGINATION_LIMIT,
+// 	country,
+// 	min,
+// 	max,
+// );
+
+// const onChange = (e) => {
+// 	debouncedSearch({
+// 		// setSearchParams({
+// 		...searchParams,
+// 		[e.target.name]: e.target.value,
+// 	});
+// };
+
+//option3
 
 //below is the version with precise instructions, useEffect launched only once to load initial page:
 //loadHotels function must preceed Home component,so it's a closure access

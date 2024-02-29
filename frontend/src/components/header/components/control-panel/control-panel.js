@@ -38,7 +38,6 @@ export const ControlPanel = () => {
 					</Link>
 				</span>
 			) : (
-				// </span>
 				<div className={styles.panel}>
 					<div className={styles.userName}>Hello, {login}</div>
 
@@ -59,22 +58,16 @@ export const ControlPanel = () => {
 
 			{roleId !== ROLES.GUEST && (
 				<Link to={`/user/${userId}`}>
-					<BsSuitcase2
-						style={{ color: 'white', fontSize: '24px', cursor: 'pointer' }}
-					/>
+					<BsSuitcase2 style={{ color: 'white', fontSize: '24px', cursor: 'pointer' }} />
 				</Link>
 			)}
 			{isAdmin && (
 				<>
 					<Link to="/hotel/create">
-						<CiEdit
-							style={{ color: 'white', fontSize: '24px', cursor: 'pointer' }}
-						/>
+						<CiEdit style={{ color: 'white', fontSize: '24px', cursor: 'pointer' }} />
 					</Link>
 					<Link to="/admin">
-						<FaUsers
-							style={{ color: 'white', fontSize: '24px', cursor: 'pointer' }}
-						/>
+						<FaUsers style={{ color: 'white', fontSize: '24px', cursor: 'pointer' }} />
 					</Link>
 				</>
 			)}

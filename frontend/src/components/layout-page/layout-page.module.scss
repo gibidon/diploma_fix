@@ -1,9 +1,8 @@
-// @use '../../styles/mixins';
 @use '#styles/mixins' as mixins;
 
 %page-base {
 	position: relative;
-	// min-height: 80dvh;
+
 	overflow-x: hidden; //get rid of horizontal scroll bar
 }
 

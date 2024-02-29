@@ -35,8 +35,8 @@ router.get("/:id/reservations", authenticated, async (req, res) => {
 		const userReservations = await getUserReservations(req.params.id, req.body)
 
 		res.send(userReservations.map(mapReservation))
-	} catch (err) {
-		res.send({ error: err.message || "Error getting reservations" })
+	} catch (error) {
+		res.send({ error: error.message || "Error getting reservations" })
 	}
 })
 
@@ -47,8 +47,8 @@ router.delete(
 			await deleteReservation(req.params.reservationId, req.params.hotelId)
 
 			res.send({ error: null })
-		} catch (err) {
-			res.send({ error: err.message })
+		} catch (error) {
+			res.send({ error: error.message })
 		}
 	}
 )
@@ -78,8 +78,8 @@ router.get("/", authenticated, hasRole([ROLES.ADMIN]), async (req, res) => {
 			users: users.map(mapUser).filter((user) => user.roleId !== ROLES.ADMIN),
 			error: null,
 		})
-	} catch (err) {
-		res.send({ error: err.message })
+	} catch (error) {
+		res.send({ error: error.message })
 	}
 })
 
@@ -107,8 +107,8 @@ router.get(
 			const reservations = await getReservations({})
 
 			res.send({ reservations: reservations.map(mapReservation), error: null })
-		} catch (err) {
-			res.send({ error: err.message })
+		} catch (error) {
+			res.send({ error: error.message })
 		}
 	}
 )

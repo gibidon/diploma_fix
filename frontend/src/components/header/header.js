@@ -7,7 +7,6 @@ export const Header = () => {
 
 	return (
 		<div className={theme === 'light' ? styles.main : styles.mainDark}>
-			{/* // <div className={styles.main}> */}
 			<div className={styles.headerContent}>
 				<div styles={styles.leftAligned}>
 					<Logo />

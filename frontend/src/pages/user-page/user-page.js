@@ -15,7 +15,7 @@ export const UserPage = () => {
 	const { loading, setLoading } = useLoading();
 
 	useEffect(() => {
-		setLoading(true); //excessive?? together with updating and deleting function
+		setLoading(true);
 
 		request(`/users/${params.id}/reservations`)
 			.then((data) => {

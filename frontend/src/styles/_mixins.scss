@@ -3,9 +3,12 @@
 	color: var(--text-white);
 
 	input,
-	select,
-	textarea {
+	select {
 		color: inherit;
+	}
+	textarea {
+		background-color: var(--background-dark);
+		color: var(--text-white);
 	}
 }
 
